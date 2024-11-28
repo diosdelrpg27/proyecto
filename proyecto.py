@@ -97,14 +97,9 @@ st.write("""
 ***
 """)
 
-## Prints the input DNA sequence
-st.header('INPUT (DNA Query)')
-sequence
-
 ## DNA nucleotide count
 st.header('OUTPUT (DNA nucleotide composición)')
 
-st.subheader('1. Diccionario')
 def DNA_nucleotide_count(seq):
     d = dict([ 
         ('A', seq.count('A')),
@@ -116,8 +111,8 @@ def DNA_nucleotide_count(seq):
 
 X = DNA_nucleotide_count(sequence)
 
-# 2. Print text
-st.subheader('2. Texto')
+# Des
+st.subheader('Descripción de la cantidad de nucleotidos')
 st.write('Existen ' + str(X['A']) + ' de adenina (A) en la secuencia')
 st.write('Existen ' + str(X['T']) + ' de timina (T) en la secuencia')
 st.write('Existen ' + str(X['G']) + ' de guanina (G) en la secuencia')
