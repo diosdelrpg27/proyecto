@@ -88,10 +88,10 @@ st.header('Introducir secuencia de ADN')
 sequence_input = ">Secuencia ADN\nGAACACGTGGAGGCAAACAGGAAGGTGAAGAAGAACTTATCCTATCAGGACGGAAGGTCCTGTGCTCGGG\nATCTTCCAGACGTCGCGACTCTAAATTGCCCCCTCTGAGGTCAAGGAACACAAGATGGTTTTGGAAATGC\nTGAACCCGATACATTATAACATCACCAGCATCGTGCCTGAAGCCATGCCTGCTGCCACCATGCCAGTCCT"
 
 #sequence = st.sidebar.text_area("Sequence input", sequence_input, height=250)
-sequence = st.text_area("Secuencia input", sequence_input, height=250)
-sequence = sequence.splitlines()
-sequence = sequence[1:] # Skips the sequence name (first line)
-sequence = ''.join(sequence) # Concatenates list to string
+sequence2 = st.text_area("Secuencia input", sequence_input, height=250)
+sequence2 = sequence2.splitlines()
+sequence2 = sequence2[1:] # Skips the sequence name (first line)
+sequence2 = ''.join(sequence2) # Concatenates list to string
 
 st.write("""
 ***
@@ -100,16 +100,16 @@ st.write("""
 ## DNA nucleotide count
 st.header('OUTPUT (DNA nucleotide composición)')
 
-def DNA_nucleotide_count(seq):
+def DNA_nucleotide_count(seq2):
     d = dict([ 
-        ('A', seq.count('A')),
-        ('T', seq.count('T')),
-        ('G', seq.count('G')),
-        ('C', seq.count('C'))
+        ('A', seq2.count('A')),
+        ('T', seq2.count('T')),
+        ('G', seq2.count('G')),
+        ('C', seq2.count('C'))
     ])
     return d
 
-X = DNA_nucleotide_count(sequence)
+X = DNA_nucleotide_count(sequence2)
 
 # Des
 st.subheader('Descripción de la cantidad de nucleotidos')
