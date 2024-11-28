@@ -115,22 +115,20 @@ def DNA_nucleotide_count(seq):
     return d
 
 X = DNA_nucleotide_count(sequence)
-st.write(X)
 
-    # 2. Print text
-    st.subheader('2. Texto')
-    st.write('There are ' + str(X['A']) + ' adenine (A)')
-    st.write('There are ' + str(X['T']) + ' thymine (T)')
-    st.write('There are ' + str(X['G']) + ' guanine (G)')
-    st.write('There are ' + str(X['C']) + ' cytosine (C)')
+# 2. Print text
+st.subheader('2. Texto')
+st.write('Existen ' + str(X['A']) + ' de adenina (A) en la secuencia')
+st.write('Existen ' + str(X['T']) + ' de timina (T) en la secuencia')
+st.write('Existen ' + str(X['G']) + ' de guanina (G) en la secuencia')
+st.write('Existen ' + str(X['C']) + ' de citosina (C) en la secuencia')
 
-    # 3. Display DataFrame
-    st.subheader('3. Mostrar DataFrame')
-    df = pd.DataFrame.from_dict(X, orient='index')
-    df = df.rename({0: 'count'}, axis='columns')
-    df.reset_index(inplace=True)
-    df = df.rename(columns={'index': 'nucleotide'})
-    st.write(df)
+# 3. Display DataFrame
+st.subheader('3. Mostrar DataFrame')
+df = pd.DataFrame.from_dict(X, orient='index')
+df = df.rename({0: 'count'}, axis='columns')
+df.reset_index(inplace=True)
+df = df.rename(columns={'index': 'nucleotide'})
 
 # Add CSS styling for subheaders
 st.markdown(
