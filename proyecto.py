@@ -85,7 +85,7 @@ Los resultados de esta app pueden utilizarse para diversos fines, como la invest
 #st.sidebar.header('Enter DNA sequence')
 st.header('Introducir secuencia de ADN')
 
-sequence_input = ">DNA Query 2\nGAACACGTGGAGGCAAACAGGAAGGTGAAGAAGAACTTATCCTATCAGGACGGAAGGTCCTGTGCTCGGG\nATCTTCCAGACGTCGCGACTCTAAATTGCCCCCTCTGAGGTCAAGGAACACAAGATGGTTTTGGAAATGC\nTGAACCCGATACATTATAACATCACCAGCATCGTGCCTGAAGCCATGCCTGCTGCCACCATGCCAGTCCT"
+sequence_input = ">Secuencia ADN\nGAACACGTGGAGGCAAACAGGAAGGTGAAGAAGAACTTATCCTATCAGGACGGAAGGTCCTGTGCTCGGG\nATCTTCCAGACGTCGCGACTCTAAATTGCCCCCTCTGAGGTCAAGGAACACAAGATGGTTTTGGAAATGC\nTGAACCCGATACATTATAACATCACCAGCATCGTGCCTGAAGCCATGCCTGCTGCCACCATGCCAGTCCT"
 
 #sequence = st.sidebar.text_area("Sequence input", sequence_input, height=250)
 sequence = st.text_area("Secuencia input", sequence_input, height=250)
@@ -104,9 +104,6 @@ sequence
 ## DNA nucleotide count
 st.header('OUTPUT (DNA nucleotide composición)')
 
-# 1. Print dictionary
-col1, col2, col3 = st.columns(3)
-with col1:
     st.subheader('1. Diccionario')
     def DNA_nucleotide_count(seq):
         d = dict([ 
@@ -120,7 +117,6 @@ with col1:
     X = DNA_nucleotide_count(sequence)
     st.write(X)
 
-with col2:
     # 2. Print text
     st.subheader('2. Texto')
     st.write('There are ' + str(X['A']) + ' adenine (A)')
@@ -128,7 +124,6 @@ with col2:
     st.write('There are ' + str(X['G']) + ' guanine (G)')
     st.write('There are ' + str(X['C']) + ' cytosine (C)')
 
-with col3:
     # 3. Display DataFrame
     st.subheader('3. Mostrar DataFrame')
     df = pd.DataFrame.from_dict(X, orient='index')
