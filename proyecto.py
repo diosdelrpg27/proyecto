@@ -104,18 +104,18 @@ sequence
 ## DNA nucleotide count
 st.header('OUTPUT (DNA nucleotide composición)')
 
-    st.subheader('1. Diccionario')
-    def DNA_nucleotide_count(seq):
-        d = dict([ 
-            ('A', seq.count('A')),
-            ('T', seq.count('T')),
-            ('G', seq.count('G')),
-            ('C', seq.count('C'))
-        ])
-        return d
+st.subheader('1. Diccionario')
+def DNA_nucleotide_count(seq):
+    d = dict([ 
+        ('A', seq.count('A')),
+        ('T', seq.count('T')),
+        ('G', seq.count('G')),
+        ('C', seq.count('C'))
+    ])
+    return d
 
-    X = DNA_nucleotide_count(sequence)
-    st.write(X)
+X = DNA_nucleotide_count(sequence)
+st.write(X)
 
     # 2. Print text
     st.subheader('2. Texto')
