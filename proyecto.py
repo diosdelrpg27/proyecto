@@ -78,6 +78,9 @@ Los resultados de esta app pueden utilizarse para diversos fines, como la invest
 ***
 """)
 
+st.subheader('Información acerca del genoma')
+st.write('Aqui pon la info')
+
 ######################
 # Input Text Box
 ######################
@@ -157,9 +160,6 @@ p = alt.Chart(df).mark_bar(color='#09e043').encode(  # Cambiar color a verde
 )
 
 st.write(p)
-
-st.subheader('Información acerca del genoma')
-st.write('Aqui pon la info')
 
 st.header('Contacto')
 st.markdown('Integrantes: Andrei,Grecia,Paola')
