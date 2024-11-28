@@ -119,7 +119,6 @@ st.write('Existen ' + str(X['G']) + ' de guanina (G) en la secuencia')
 st.write('Existen ' + str(X['C']) + ' de citosina (C) en la secuencia')
 
 # 3. Display DataFrame
-st.subheader('3. Mostrar DataFrame')
 df = pd.DataFrame.from_dict(X, orient='index')
 df = df.rename({0: 'count'}, axis='columns')
 df.reset_index(inplace=True)
@@ -140,7 +139,7 @@ st.markdown(
 
 # 4. Display Bar Chart using Altair
 ######################
-st.subheader('4. Gráfico de barras', anchor="gráfico-barras")
+st.subheader('Gráfico de barras', anchor="gráfico-barras")
 
 # Mejorar el diseño del gráfico de barras
 p = alt.Chart(df).mark_bar(color='#09e043').encode(  # Cambiar color a verde
@@ -159,5 +158,8 @@ p = alt.Chart(df).mark_bar(color='#09e043').encode(  # Cambiar color a verde
 
 st.write(p)
 
+st.subheader('Información acerca del genoma')
+
 st.header('Contacto')
 st.markdown('Integrantes: Andrei,Grecia,Paola')
+
