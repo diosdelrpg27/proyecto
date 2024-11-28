@@ -85,10 +85,10 @@ Los resultados de esta app pueden utilizarse para diversos fines, como la invest
 #st.sidebar.header('Enter DNA sequence')
 st.header('Introducir secuencia de ADN')
 
-sequence_input = ">Secuencia ADN\nGAACACGTGGAGGCAAACAGGAAGGTGAAGAAGAACTTATCCTATCAGGACGGAAGGTCCTGTGCTCGGG\nATCTTCCAGACGTCGCGACTCTAAATTGCCCCCTCTGAGGTCAAGGAACACAAGATGGTTTTGGAAATGC\nTGAACCCGATACATTATAACATCACCAGCATCGTGCCTGAAGCCATGCCTGCTGCCACCATGCCAGTCCT"
+sequence2_input = ">Secuencia ADN\nGAACACGTGGAGGCAAACAGGAAGGTGAAGAAGAACTTATCCTATCAGGACGGAAGGTCCTGTGCTCGGG\nATCTTCCAGACGTCGCGACTCTAAATTGCCCCCTCTGAGGTCAAGGAACACAAGATGGTTTTGGAAATGC\nTGAACCCGATACATTATAACATCACCAGCATCGTGCCTGAAGCCATGCCTGCTGCCACCATGCCAGTCCT"
 
-#sequence = st.sidebar.text_area("Sequence input", sequence_input, height=250)
-sequence2 = st.text_area("Secuencia input", sequence_input, height=250)
+#sequence = st.sidebar.text_area("Sequence input", sequence2_input, height=250)
+sequence2 = st.text_area("Secuencia input", sequence2_input, height=250)
 sequence2 = sequence2.splitlines()
 sequence2 = sequence2[1:] # Skips the sequence name (first line)
 sequence2 = ''.join(sequence2) # Concatenates list to string
