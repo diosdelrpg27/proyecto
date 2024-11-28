@@ -85,13 +85,13 @@ Los resultados de esta app pueden utilizarse para diversos fines, como la invest
 #st.sidebar.header('Enter DNA sequence')
 st.header('Introducir secuencia de ADN')
 
-sequence2_input = ">Secuencia ADN\nGAACACGTGGAGGCAAACAGGAAGGTGAAGAAGAACTTATCCTATCAGGACGGAAGGTCCTGTGCTCGGG\nATCTTCCAGACGTCGCGACTCTAAATTGCCCCCTCTGAGGTCAAGGAACACAAGATGGTTTTGGAAATGC\nTGAACCCGATACATTATAACATCACCAGCATCGTGCCTGAAGCCATGCCTGCTGCCACCATGCCAGTCCT"
+sequence_input = ">Secuencia ADN\nGAACACGTGGAGGCAAACAGGAAGGTGAAGAAGAACTTATCCTATCAGGACGGAAGGTCCTGTGCTCGGG\nATCTTCCAGACGTCGCGACTCTAAATTGCCCCCTCTGAGGTCAAGGAACACAAGATGGTTTTGGAAATGC\nTGAACCCGATACATTATAACATCACCAGCATCGTGCCTGAAGCCATGCCTGCTGCCACCATGCCAGTCCT"
 
-#sequence = st.sidebar.text_area("Sequence input", sequence2_input, height=250)
-sequence2 = st.text_area("Secuencia input", sequence2_input, height=250)
-sequence2 = sequence2.splitlines()
-sequence2 = sequence2[1:] # Skips the sequence name (first line)
-sequence2 = ''.join(sequence2) # Concatenates list to string
+#sequence = st.sidebar.text_area("Sequence input", sequence_input, height=250)
+sequence = st.text_area("Secuencia input", sequence_input, height=250)
+sequence = sequence.splitlines()
+sequence = sequence[1:] # Skips the sequence name (first line)
+sequence = ''.join(sequence) # Concatenates list to string
 
 st.write("""
 ***
@@ -100,16 +100,16 @@ st.write("""
 ## DNA nucleotide count
 st.header('OUTPUT (DNA nucleotide composición)')
 
-def DNA_nucleotide_count(seq2):
+def DNA_nucleotide_count(seq):
     d = dict([ 
-        ('A', seq2.count('A')),
-        ('T', seq2.count('T')),
-        ('G', seq2.count('G')),
-        ('C', seq2.count('C'))
+        ('A', seq.count('A')),
+        ('T', seq.count('T')),
+        ('G', seq.count('G')),
+        ('C', seq.count('C'))
     ])
     return d
 
-X = DNA_nucleotide_count(sequence2)
+X = DNA_nucleotide_count(sequence)
 
 # Des
 st.subheader('Descripción de la cantidad de nucleotidos')
@@ -161,5 +161,3 @@ st.write(p)
 
 st.header('Contacto')
 st.markdown('Integrantes: Andrei,Grecia,Paola')
-
-# In[<Parte 2 GEY----------------------------------------------------------]:
