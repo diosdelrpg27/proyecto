@@ -171,56 +171,6 @@ p = alt.Chart(df).mark_bar(color='#09e043').encode(  # Cambiar color a verde
 
 st.write(p)
 
-### 5. Display Pie Chart using Altair
-st.subheader('5. Mostrar gráfico circular', anchor="gráfico-circular")
-
-import altair as alt
-
-# Reshape the data for animated pie chart
-df_pivot = df.melt('nucleotide', var_name='metric', value_name='value')
-
-# Create animated pie chart
-animated_pie_chart = alt.Chart(df_pivot).mark_arc().encode(
-    alt.X('value:Q', stack='zero'),
-    color='nucleotide:N',
-    tooltip=['nucleotide', 'metric', 'value']
-).properties(
-    width=500,
-    height=400
-).transform_joinaggregate(
-    total='sum(value)',
-    groupby=['nucleotide']
-).transform_calculate(
-    percentage='datum.value / datum.total'
-).encode(
-    text=alt.Text('percentage:Q', format='.1%')
-).configure_mark(
-    opacity=0.8
-)
-
-# Adjust properties of the animated pie chart
-animated_pie_chart = animated_pie_chart.properties(
-    width=300,
-    height=300
-)
-
-# Display the animated pie chart
-st.altair_chart(animated_pie_chart, use_container_width=True)
-
-p = alt.Chart(df).mark_bar().encode(
-    x='nucleotide',
-    y='count',
-    column='nucleotide'
-)
-
-p = p.properties(
-    width=alt.Step(80),  # controls width of bar
-    height=alt.Step(40),  # controls height of bar
-    column=alt.Column(
-        spacing=10  # controls spacing between grouped bars
-    )
-)
-
 st.header('Contacto')
 st.markdown('Integrantes: Andrei,Grecia,Paola')
 
