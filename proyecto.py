@@ -78,8 +78,8 @@ Los resultados de esta app pueden utilizarse para diversos fines, como la invest
 ***
 """)
 
-st.subheader('Información acerca del genoma')
-st.write('Aqui pon la info')
+st.subheader('¿Qué son los nucleótidos?')
+st.write('')
 
 ######################
 # Input Text Box
