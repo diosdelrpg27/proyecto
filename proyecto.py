@@ -81,7 +81,7 @@ Los resultados de esta app pueden utilizarse para diversos fines, como la invest
 st.subheader('¿Qué son los nucleótidos?')
 st.write('Los nucleótidos son las unidades básicas que componen el ADN. Su composición y organización son fundamentales para entender diversas funciones biológicas. ')
 
-image2 = Image.open('imagen4.png')
+image2 = Image.open('imagen4.jpeg')
 
 # Actualización: Cambié use_column_width a use_container_width
 st.image(image2, use_container_width=True)
