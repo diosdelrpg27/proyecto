@@ -87,6 +87,12 @@ st.write('Base nitrogenada: Define el tipo de nucleótido y codifica la informac
 
 image2 = Image.open('imagen4.jpeg')
 
+st.subheader('Las bases se componen de:')
+st.write('Adenina (A)')
+st.write('Timina (T)')
+st.write('Guanina (G)')
+st.write('Citosina (C)')
+
 # Actualización: Cambié use_column_width a use_container_width
 st.image(image2, use_container_width=True)
 
