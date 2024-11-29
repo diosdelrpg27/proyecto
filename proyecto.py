@@ -79,7 +79,11 @@ Los resultados de esta app pueden utilizarse para diversos fines, como la invest
 """)
 
 st.subheader('¿Qué son los nucleótidos?')
-st.write('Los nucleótidos son las unidades básicas que componen el ADN. Su composición y organización son fundamentales para entender diversas funciones biológicas. ')
+st.write('Los nucleótidos son las unidades básicas que componen el ADN. Su composición y organización son fundamentales para entender diversas funciones biológicas. 
+Sus componentes son:
+Grupo fosfato: Une nucleótidos para formar la estructura de la cadena de ADN.
+Azúcar desoxirribosa: Una molécula de azúcar de cinco carbonos que da al ADN su nombre.
+Base nitrogenada: Define el tipo de nucleótido y codifica la información genética.')
 
 image2 = Image.open('imagen4.jpeg')
 
