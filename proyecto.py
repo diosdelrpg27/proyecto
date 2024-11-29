@@ -79,7 +79,7 @@ Los resultados de esta app pueden utilizarse para diversos fines, como la invest
 """)
 
 st.subheader('¿Qué son los nucleótidos?')
-st.write('')
+st.write('Los nucleótidos son las unidades básicas que componen el ADN. Su composición y organización son fundamentales para entender diversas funciones biológicas. ')
 
 ######################
 # Input Text Box
