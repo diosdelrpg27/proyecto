@@ -104,7 +104,7 @@ st.write('Guanina (G) se une con Citosina (C) mediante tres enlaces de hidrógen
 st.write("""Polaridad: Las cadenas tienen una dirección (5' a 3' y 3' a 5'), lo que es crucial para la replicación y transcripción.""")
 
 image4 = Image.open('imagen6.jpeg')
-st.image(image6, use_container_width=True)
+st.image(image4, use_container_width=True)
 
 
 ######################
