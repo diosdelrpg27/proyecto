@@ -94,6 +94,9 @@ st.write('Timina (T)')
 st.write('Guanina (G)')
 st.write('Citosina (C)')
 
+image3 = Image.open('imagen5.jpeg')
+st.image(image3, use_container_width=True)
+
 ######################
 # Input Text Box
 ######################
