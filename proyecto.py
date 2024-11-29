@@ -194,6 +194,7 @@ p = alt.Chart(df).mark_bar(color='#09e043').encode(  # Cambiar color a verde
 
 st.write(p)
 
-st.header('Contacto')
-st.markdown('Integrantes: Andrei,Grecia,Paola')
-
+st.header('Integrantes')
+st.markdown('Andrei Daniel Aguirre Martínez')
+st.markdown('Grecia Moreno Villarreal')
+st.markdown('Susana Paola Villanueva López')
