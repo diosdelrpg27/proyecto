@@ -103,6 +103,10 @@ st.write('Adenina (A) se une con Timina (T) mediante dos enlaces de hidrógeno.'
 st.write('Guanina (G) se une con Citosina (C) mediante tres enlaces de hidrógeno.')
 st.write("""Polaridad: Las cadenas tienen una dirección (5' a 3' y 3' a 5'), lo que es crucial para la replicación y transcripción.""")
 
+image4 = Image.open('imagen6.png')
+st.image(image6, use_container_width=True)
+
+
 ######################
 # Input Text Box
 ######################
