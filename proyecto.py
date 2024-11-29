@@ -106,6 +106,12 @@ st.write("""Polaridad: Las cadenas tienen una dirección (5' a 3' y 3' a 5'), lo
 image4 = Image.open('imagen6.jpeg')
 st.image(image4, use_container_width=True)
 
+st.subheader('Funciones:')
+st.write('Almacén de información genética: Los nucleótidos codifican genes que dirigen la síntesis de proteínas.')
+st.write('Regulación de procesos celulares: Secuencias específicas regulan la expresión génica.')
+st.write('Replicación: La complementariedad de bases permite copiar la información genética de manera precisa.')
+
+
 
 ######################
 # Input Text Box
