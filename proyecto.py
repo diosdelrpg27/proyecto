@@ -111,7 +111,7 @@ st.write('Almacén de información genética: Los nucleótidos codifican genes q
 st.write('Regulación de procesos celulares: Secuencias específicas regulan la expresión génica.')
 st.write('Replicación: La complementariedad de bases permite copiar la información genética de manera precisa.')
 
-image5 = Image.open('imagen7.mpeg')
+image5 = Image.open('imagen7.webp')
 st.image(image5, use_container_width=True)
 
 ######################
